@@ -48,7 +48,9 @@ export function Logo(props: ILogoProps) {
           alt="logo"
         />
       </Image>
-      <LogoText color={color || "dark"}>Baokhang Lam</LogoText>
+      <LogoText color={color || "dark"}>
+        <a href="#home">Baokhang</a>
+      </LogoText>
     </LogoContainer>
   );
 }

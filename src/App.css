@@ -42,3 +42,8 @@ a {
   color: inherit;
   text-decoration: inherit; /* no underline */
 }
+
+.react-multi-carousel-item {
+  display: flex;
+  justify-content: center;
+}

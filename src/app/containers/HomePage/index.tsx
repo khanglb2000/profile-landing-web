@@ -3,6 +3,10 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import { Navbar } from "../../components/navbar";
 import { TopSection } from "./topSection";
+import { Marginer } from "../../components/marginer";
+import { Footer } from "../../components/footer";
+import { Contact } from "./contact";
+import { Projects } from "./projects";
 
 const PageContainer = styled.div`
   ${tw`
@@ -21,6 +25,12 @@ export function HomePage() {
     <PageContainer>
       <Navbar />
       <TopSection />
+      <Marginer direction="vertical" margin="4em" />
+      <Projects />
+      <Marginer direction="vertical" margin="4em" />
+      <Contact />
+      <Marginer direction="vertical" margin="4em" />
+      <Footer />
     </PageContainer>
   );
 }

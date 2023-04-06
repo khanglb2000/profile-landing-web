@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import tw from "twin.macro";
 import { slide as Menu } from "react-burger-menu";
@@ -44,22 +44,37 @@ const NavItem = styled.li<{ menu?: any }>`
 
 export function NavItems() {
   const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
+  const [isOpen, setOpen] = useState(false);
+
+  const handleIsOpen = () => {
+    setOpen(!isOpen);
+  };
+
+  const closeSideBar = () => {
+    setOpen(false);
+  };
 
   if (isMobile) {
     return (
-      <Menu right styles={menuStyles}>
+      <Menu
+        right
+        styles={menuStyles}
+        isOpen={isOpen}
+        onOpen={handleIsOpen}
+        onClose={handleIsOpen}
+      >
         <ListContainer>
-          <NavItem menu>
-            <a href="#">Home</a>
+          <NavItem menu onClick={closeSideBar}>
+            <a href="#home">Home</a>
           </NavItem>
-          <NavItem menu>
-            <a href="#">Projects</a>
+          <NavItem menu onClick={closeSideBar}>
+            <a href="#project">Projects</a>
           </NavItem>
-          <NavItem menu>
+          <NavItem menu onClick={closeSideBar}>
             <a href="#">Tech</a>
           </NavItem>
-          <NavItem menu>
-            <a href="#">Contact</a>
+          <NavItem menu onClick={closeSideBar}>
+            <a href="#contact">Contact</a>
           </NavItem>
         </ListContainer>
       </Menu>
@@ -69,16 +84,16 @@ export function NavItems() {
   return (
     <ListContainer>
       <NavItem>
-        <a href="#">Home</a>
+        <a href="#home">Home</a>
       </NavItem>
       <NavItem>
-        <a href="#">Projects</a>
+        <a href="#project">Projects</a>
       </NavItem>
       <NavItem>
         <a href="#">Tech</a>
       </NavItem>
       <NavItem>
-        <a href="#">Contact</a>
+        <a href="#contact">Contact</a>
       </NavItem>
     </ListContainer>
   );

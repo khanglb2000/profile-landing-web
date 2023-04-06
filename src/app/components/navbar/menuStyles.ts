@@ -13,8 +13,9 @@ export default {
     background: "#a90000",
   },
   bmCrossButton: {
-    height: "24px",
-    width: "24px",
+    height: "30px",
+    width: "30px",
+    right: "25px",
   },
   bmCross: {
     background: "#bdc3c7",
@@ -39,6 +40,11 @@ export default {
   },
   bmItem: {
     display: "inline-block",
+  },
+  bmItemClick: {
+    bmBurgerBars: {
+      display: "none",
+    },
   },
   bmOverlay: {
     background: "rgba(0, 0, 0, 0.3)",

@@ -7,6 +7,10 @@ import MclarenCarImg from "../../../assets/images/mclaren-orange-big.png";
 import BlobImg from "../../../assets/images/blob.svg";
 import { Button } from "../../components/button";
 
+export interface ITopSectionProps {
+  id: string;
+}
+
 const TopSectionContainer = styled.div`
   min-height: 400px;
   margin-top: 6em;
@@ -15,8 +19,8 @@ const TopSectionContainer = styled.div`
         max-w-screen-2xl
         flex
         justify-between
-        pl-3
-        pr-3
+        pl-1
+        pr-1
         lg:pl-12
         lg:pr-12
     `};
@@ -155,27 +159,23 @@ const ButtonsContainer = styled.div`
 
 export function TopSection() {
   return (
-    <TopSectionContainer>
+    <TopSectionContainer id="home">
       <LeftContainer>
-        <Slogan>Rent The Best Quality Car's With Us</Slogan>
+        <Slogan>Bao Khang Lam</Slogan>
         <Description>
-          Always choose the best car from our local stores or order it remotely
-          at the best price for you and get the best quality cars for as long as
-          you like
+          I am a junior front-end developer in Ho Chi Minh City. I'm going to
+          graduate from FPT University in summer 2023 and currently looking for
+          a fulltime Front-end developer position. I have experience with
+          Typescript, React, Tailwind, Angular, Bootstrap. I would be thrilled
+          to learn more alongside your cross-functional team of engineers,
+          designers, and developers.
         </Description>
         <ButtonsContainer>
-          <Button text="Book Your Ride" />
-          <Button theme="filled" text="Sell Your Car" />
+          <Button text="Contact" />
+          <Button theme="filled" text="Download CV" />
         </ButtonsContainer>
       </LeftContainer>
-      <RightContainer>
-        <BlobContainer>
-          <img src={BlobImg} alt="" />
-        </BlobContainer>
-        <StandaloneCar>
-          <img src={MclarenCarImg} alt="" />
-        </StandaloneCar>
-      </RightContainer>
+      <RightContainer></RightContainer>
     </TopSectionContainer>
   );
 }
