@@ -166,13 +166,7 @@ export function Footer() {
               <a href="#home">Home</a>
             </ListItem>
             <ListItem>
-              <a href="#about">About</a>
-            </ListItem>
-            <ListItem>
               <a href="#project">Projects</a>
-            </ListItem>
-            <ListItem>
-              <a href="#blog">Blog</a>
             </ListItem>
           </LinksList>
         </SectionContainer>
@@ -180,13 +174,7 @@ export function Footer() {
           <HeaderTitle>Other Links</HeaderTitle>
           <LinksList>
             <ListItem>
-              <a href="#faq">FAQ</a>
-            </ListItem>
-            <ListItem>
               <a href="#contact">Contact</a>
-            </ListItem>
-            <ListItem>
-              <a href="#support">Support</a>
             </ListItem>
           </LinksList>
         </SectionContainer>
@@ -196,7 +184,7 @@ export function Footer() {
             <BlueIcon>
               <FontAwesomeIcon icon={faPhoneAlt} />
             </BlueIcon>
-            <SmallText>+91 555-234-8469</SmallText>
+            <SmallText>+84 555-666-777</SmallText>
           </HorizontalContainer>
         </SectionContainer>
         <SectionContainer>
@@ -205,7 +193,7 @@ export function Footer() {
             <BlueIcon>
               <FontAwesomeIcon icon={faEnvelope} />
             </BlueIcon>
-            <SmallText>info@yourcar.com</SmallText>
+            <SmallText>lambaokhang@gmail.com</SmallText>
           </HorizontalContainer>
         </SectionContainer>
       </InnerContainer>

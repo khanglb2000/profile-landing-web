@@ -42,12 +42,12 @@ export function Logo(props: ILogoProps) {
 
   return (
     <LogoContainer>
-      <Image>
+      {/* <Image>
         <img
           src={bgColor === "dark" ? CarLogoDarkImg : CarLogoImg}
           alt="logo"
         />
-      </Image>
+      </Image> */}
       <LogoText color={color || "dark"}>
         <a href="#home">Baokhang</a>
       </LogoText>

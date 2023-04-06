@@ -7,15 +7,15 @@ import {
   faTachometerAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ICar } from "../../../typings/car";
+import { IProject } from "../../../typings/project";
 import { Button } from "../button";
 
-interface ICarProps extends ICar {}
+interface IProjectProps extends IProject {}
 
-const CarContainer = styled.div`
-  width: 16.5em;
-  min-height: 23em;
-  max-height: 23em;
+const ProjectContainer = styled.div`
+  width: 20em;
+  min-height: 30em;
+  max-height: 30em;
   box-shadow: 0 1.3px 17px -2px rgba(0, 0, 0, 0.4);
   ${tw`
         flex
@@ -31,23 +31,43 @@ const CarContainer = styled.div`
     `};
 `;
 
-const CarThumbnail = styled.div`
+const ProjectThumbnail = styled.div`
   width: 100%;
-  height: auto;
+  min-height: 10em;
 
   img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    overflow: hidden;
   }
 `;
 
-const CarName = styled.h3`
+const ProjectName = styled.h3`
   ${tw`
         text-base
         font-bold
         text-black
         mt-1
         mb-1
+    `};
+`;
+
+const DescriptionContainer = styled.div`
+  min-height: 8em;
+  ${tw`
+        w-full
+        flex
+        justify-start
+        mt-3
+    `};
+`;
+
+const TechContainer = styled.div`
+  ${tw`
+        w-full
+        flex
+        justify-start
+        mt-3
     `};
 `;
 
@@ -135,55 +155,19 @@ const RentButton = styled(Button)`
     `};
 `;
 
-export function Project(props: ICarProps) {
-  const {
-    name,
-    thumbnailSrc,
-    dailyPrice,
-    monthlyPrice,
-    mileage,
-    gearType,
-    gas,
-  } = props;
+export function Project(props: IProjectProps) {
+  const { name, thumbnailSrc, description, source } = props;
 
   return (
-    <CarContainer>
-      <CarThumbnail>
+    <ProjectContainer>
+      <ProjectThumbnail>
         <img src={thumbnailSrc} alt="" />
-      </CarThumbnail>
-      <CarName>{name}</CarName>
-      <PricesContainer>
-        <DailyPrice>
-          ${dailyPrice}
-          <SmallText>/Day</SmallText>
-        </DailyPrice>
-        <MonthlyPrice>
-          ${monthlyPrice}
-          <SmallText>/Month</SmallText>
-        </MonthlyPrice>
-      </PricesContainer>
-      <Seperator />
-      <CarDetailsContainer>
-        <CarDetail>
-          <SmallIcon>
-            <FontAwesomeIcon icon={faTachometerAlt} />
-          </SmallIcon>
-          <CarInfo>{mileage}</CarInfo>
-        </CarDetail>
-        <CarDetail>
-          <SmallIcon>
-            <FontAwesomeIcon icon={faEllipsisH} />
-          </SmallIcon>
-          <CarInfo>{gearType}</CarInfo>
-        </CarDetail>
-        <CarDetail>
-          <SmallIcon>
-            <FontAwesomeIcon icon={faFillDrip} />
-          </SmallIcon>
-          <CarInfo>{gas}</CarInfo>
-        </CarDetail>
-      </CarDetailsContainer>
-      <RentButton text="Rent Now" />
-    </CarContainer>
+      </ProjectThumbnail>
+      <ProjectName>{name}</ProjectName>
+      <DescriptionContainer>
+        <p>{description}</p>
+      </DescriptionContainer>
+      <RentButton text="Source Code" />
+    </ProjectContainer>
   );
 }
