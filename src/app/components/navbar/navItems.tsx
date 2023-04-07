@@ -71,7 +71,7 @@ export function NavItems() {
             <a href="#project">Projects</a>
           </NavItem>
           <NavItem menu onClick={closeSideBar}>
-            <a href="#">Tech</a>
+            <a href="#tech">Skills</a>
           </NavItem>
           <NavItem menu onClick={closeSideBar}>
             <a href="#contact">Contact</a>
@@ -90,7 +90,7 @@ export function NavItems() {
         <a href="#project">Projects</a>
       </NavItem>
       <NavItem>
-        <a href="#">Tech</a>
+        <a href="#tech">Skills</a>
       </NavItem>
       <NavItem>
         <a href="#contact">Contact</a>

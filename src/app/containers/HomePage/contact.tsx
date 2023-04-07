@@ -98,20 +98,22 @@ export function Contact() {
             </StepIcon>
           </Step>
           <StepTitle>Send email</StepTitle>
-          <StepDescription>
-            Find the nearest Yourcar point and book your car.
-          </StepDescription>
+          <StepDescription>Send email for work.</StepDescription>
         </StepContainer>
         <StepContainer>
-          <Step>
-            <StepIcon>
-              <FontAwesomeIcon icon={faLinkedin} />
-            </StepIcon>
-          </Step>
-          <StepTitle>Visite my Linkedin</StepTitle>
-          <StepDescription>
-            Book your nice car with ease in one single click
-          </StepDescription>
+          <a
+            href="https://www.linkedin.com/in/baokhang82"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Step>
+              <StepIcon>
+                <FontAwesomeIcon icon={faLinkedin} />
+              </StepIcon>
+            </Step>
+          </a>
+          <StepTitle>My Linkedin</StepTitle>
+          <StepDescription>Connect me on Linkedin.</StepDescription>
         </StepContainer>
         <StepContainer>
           <Step>
@@ -120,9 +122,7 @@ export function Contact() {
             </StepIcon>
           </Step>
           <StepTitle>Call Me</StepTitle>
-          <StepDescription>
-            Pickup the Best Date to rent a car for you.
-          </StepDescription>
+          <StepDescription>Here is my phone number.</StepDescription>
         </StepContainer>
       </StepsContainer>
     </Container>

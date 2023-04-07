@@ -1,11 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
-import {
-  faEllipsisH,
-  faFillDrip,
-  faTachometerAlt,
-} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IProject } from "../../../typings/project";
 import { Button } from "../button";
@@ -124,13 +119,13 @@ export function Project(props: IProjectProps) {
 
   const handleRenderLogo = (name: string) => {
     if (name === "html") {
-      return <FontAwesomeIcon icon={faHtml5} />;
+      return <FontAwesomeIcon icon={faHtml5} color="#e34c26" />;
     } else if (name === "css") {
-      return <FontAwesomeIcon icon={faCss3Alt} />;
+      return <FontAwesomeIcon icon={faCss3Alt} color="#264de4" />;
     } else if (name === "react") {
-      return <FontAwesomeIcon icon={faReact} />;
+      return <FontAwesomeIcon icon={faReact} color="#61dbfb" />;
     } else if (name === "bootstrap") {
-      return <FontAwesomeIcon icon={faBootstrap} />;
+      return <FontAwesomeIcon icon={faBootstrap} color="#563d7c" />;
     } else if (name === "tailwind") {
       return (
         <Image>
@@ -157,25 +152,6 @@ export function Project(props: IProjectProps) {
           ))}
         </>
       </TechContainer>
-      {/* <TechContainer>
-        <TechIcon>
-          <FontAwesomeIcon icon={faHtml5} />
-        </TechIcon>
-        <TechIcon>
-          <FontAwesomeIcon icon={faCss3Alt} />
-        </TechIcon>
-        <TechIcon>
-          <FontAwesomeIcon icon={faReact} />
-        </TechIcon>
-        <TechIcon>
-          <FontAwesomeIcon icon={faBootstrap} />
-        </TechIcon>
-        <TechIcon>
-          <Image>
-            <img src={TailwindLogo} alt="tailwind" sizes="1rem" />
-          </Image>
-        </TechIcon>
-      </TechContainer> */}
       <VisitButton text="Visit" source={source} />
     </ProjectContainer>
   );
