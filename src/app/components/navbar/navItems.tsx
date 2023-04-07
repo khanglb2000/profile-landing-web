@@ -10,7 +10,7 @@ const ListContainer = styled.ul`
   ${tw`
     flex
     list-none
-    mr-4
+    pr-4
   `};
 `;
 

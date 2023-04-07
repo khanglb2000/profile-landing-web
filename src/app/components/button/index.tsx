@@ -37,6 +37,7 @@ const OutlinedButton = styled(BaseButton)`
         hover:bg-transparent
         hover:text-blue-800
         hover:border-blue-800
+        cursor-pointer
     `};
 `;
 
@@ -48,6 +49,7 @@ const FilledButton = styled(BaseButton)`
         hover:bg-blue-800
         hover:text-white
         hover:border-transparent
+        cursor-pointer
     `};
 `;
 

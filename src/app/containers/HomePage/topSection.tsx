@@ -2,9 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 import { SCREENS } from "../../components/responsive";
-
-import MclarenCarImg from "../../../assets/images/mclaren-orange-big.png";
-import BlobImg from "../../../assets/images/blob.svg";
 import { Button } from "../../components/button";
 
 export interface ITopSectionProps {
@@ -67,85 +64,11 @@ const Description = styled.p`
         lg:text-sm
         xl:text-lg
         sm:max-h-full
-        overflow-hidden
-        max-h-20
         text-gray-800
     `};
 
   @media (min-width: ${SCREENS.lg}) {
     overflow: visible;
-  }
-`;
-
-const BlobContainer = styled.div`
-  width: 20em;
-  height: 10em;
-  position: absolute;
-  right: -5em;
-  top: -9em;
-  z-index: -1;
-  transform: rotate(-30deg);
-
-  img {
-    width: 100%;
-    height: auto;
-    max-height: max-content;
-  }
-
-  @media (min-width: ${SCREENS.sm}) {
-    width: 40em;
-    max-height: 10em;
-    right: -9em;
-    top: -16em;
-    transform: rotate(-25deg);
-  }
-
-  @media (min-width: ${SCREENS.lg}) {
-    width: 50em;
-    max-height: 30em;
-    right: -7em;
-    top: -15em;
-    transform: rotate(-30deg);
-  }
-
-  @media (min-width: ${SCREENS.xl}) {
-    width: 70em;
-    max-height: 30em;
-    right: -15em;
-    top: -25em;
-    transform: rotate(-20deg);
-  }
-`;
-
-const StandaloneCar = styled.div`
-  width: auto;
-  height: 10em;
-  right: -6em;
-  top: -5em;
-  position: absolute;
-
-  img {
-    width: auto;
-    height: 100%;
-    max-width: fit-content;
-  }
-
-  @media (min-width: ${SCREENS.sm}) {
-    height: 16em;
-    right: -6em;
-    top: -6em;
-  }
-
-  @media (min-width: ${SCREENS.lg}) {
-    height: 21em;
-    right: -8em;
-    top: -5em;
-  }
-
-  @media (min-width: ${SCREENS.xl}) {
-    height: 30em;
-    right: -13em;
-    top: -9em;
   }
 `;
 

@@ -92,11 +92,13 @@ export function Contact() {
       <Title>Contact Me</Title>
       <StepsContainer>
         <StepContainer>
-          <Step>
-            <StepIcon>
-              <FontAwesomeIcon icon={faEnvelope} color="green" />
-            </StepIcon>
-          </Step>
+          <a href="mailto:lambaokhang2000@gmail.com">
+            <Step>
+              <StepIcon>
+                <FontAwesomeIcon icon={faEnvelope} color="green" />
+              </StepIcon>
+            </Step>
+          </a>
           <StepTitle>Send email</StepTitle>
           <StepDescription>Send email for work.</StepDescription>
         </StepContainer>
@@ -116,11 +118,13 @@ export function Contact() {
           <StepDescription>Connect me on Linkedin.</StepDescription>
         </StepContainer>
         <StepContainer>
-          <Step>
-            <StepIcon>
-              <FontAwesomeIcon icon={faPhone} color="orange" />
-            </StepIcon>
-          </Step>
+          <a href="tel:+84555666777">
+            <Step>
+              <StepIcon>
+                <FontAwesomeIcon icon={faPhone} color="orange" />
+              </StepIcon>
+            </Step>
+          </a>
           <StepTitle>Call Me</StepTitle>
           <StepDescription>Here is my phone number.</StepDescription>
         </StepContainer>

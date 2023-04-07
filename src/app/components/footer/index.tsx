@@ -11,7 +11,7 @@ const FooterContainer = styled.div`
   ${tw`
         flex
         flex-col
-        min-w-full
+        w-[101%]
         pt-10
         md:pt-16
         items-center
@@ -193,7 +193,7 @@ export function Footer() {
             <BlueIcon>
               <FontAwesomeIcon icon={faEnvelope} />
             </BlueIcon>
-            <SmallText>lambaokhang@gmail.com</SmallText>
+            <SmallText>lambaokhang2000@gmail.com</SmallText>
           </HorizontalContainer>
         </SectionContainer>
       </InnerContainer>

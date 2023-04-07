@@ -2,14 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 
-import CarLogoImg from "../../../assets/images/car-logo.png";
-import CarLogoDarkImg from "../../../assets/images/car-logo-dark.png";
+import LogoImg from "../../../assets/images/logo-light.png";
+import LogoDarkImg from "../../../assets/images/logo-dark.png";
 interface ILogoProps {
   color?: "white" | "dark";
   bgColor?: "white" | "dark";
 }
 
 const LogoContainer = styled.div`
+  padding-left: 1rem;
   ${tw`
     flex
     items-center
@@ -41,12 +42,9 @@ export function Logo(props: ILogoProps) {
 
   return (
     <LogoContainer>
-      {/* <Image>
-        <img
-          src={bgColor === "dark" ? CarLogoDarkImg : CarLogoImg}
-          alt="logo"
-        />
-      </Image> */}
+      <Image>
+        <img src={bgColor === "dark" ? LogoDarkImg : LogoImg} alt="logo" />
+      </Image>
       <LogoText color={color || "dark"}>
         <a href="#home">Baokhang</a>
       </LogoText>
