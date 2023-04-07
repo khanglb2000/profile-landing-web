@@ -171,7 +171,6 @@ export function TopSection() {
           designers, and developers.
         </Description>
         <ButtonsContainer>
-          <Button text="Contact" />
           <Button theme="filled" text="Download CV" />
         </ButtonsContainer>
       </LeftContainer>

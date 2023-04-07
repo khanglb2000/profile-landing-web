@@ -9,6 +9,13 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IProject } from "../../../typings/project";
 import { Button } from "../button";
+import {
+  faBootstrap,
+  faCss3Alt,
+  faHtml5,
+  faReact,
+} from "@fortawesome/free-brands-svg-icons";
+import TailwindLogo from "../../../assets/images/tailwind-css.png";
 
 interface IProjectProps extends IProject {}
 
@@ -62,6 +69,10 @@ const DescriptionContainer = styled.div`
     `};
 `;
 
+interface TechProps {
+  children: JSX.Element | JSX.Element[];
+}
+
 const TechContainer = styled.div`
   ${tw`
         w-full
@@ -71,70 +82,21 @@ const TechContainer = styled.div`
     `};
 `;
 
-const PricesContainer = styled.div`
+const TechIcon = styled.span`
   ${tw`
-        w-full
-        flex
-        justify-start
-        mt-3
-    `};
+    text-blue-800
+    text-xl
+    mr-1
+  `};
 `;
 
-const SmallText = styled.p`
-  color: inherit;
-  ${tw`
-        inline-flex
-        m-0
-        text-xs
-        font-thin
-    `};
-`;
-
-const DailyPrice = styled.h5`
-  ${tw`
-        text-blue-800
-        font-bold
-        text-sm
-        mr-3
-    `};
-`;
-
-const MonthlyPrice = styled.h5`
-  ${tw`
-        text-gray-500
-        font-bold
-        text-sm
-    `};
-`;
-
-const SmallIcon = styled.span`
-  ${tw`
-        text-gray-400
-        text-sm
-        mr-1
-    `};
-`;
-
-const CarDetailsContainer = styled.div`
-  ${tw`
-        flex
-        w-full
-        justify-between
-    `};
-`;
-
-const CarDetail = styled.span`
-  ${tw`
-        flex
-        items-center
-    `};
-`;
-
-const CarInfo = styled.h6`
-  ${tw`
-        text-gray-400
-        text-xs
-    `};
+const Image = styled.div`
+  width: auto;
+  ${tw`h-6 md:h-9`};
+  img {
+    width: auto;
+    height: 70%;
+  }
 `;
 
 const Seperator = styled.div`
@@ -148,7 +110,7 @@ const Seperator = styled.div`
     `};
 `;
 
-const RentButton = styled(Button)`
+const VisitButton = styled(Button)`
   ${tw`
         min-w-full
         mt-5
@@ -156,7 +118,27 @@ const RentButton = styled(Button)`
 `;
 
 export function Project(props: IProjectProps) {
-  const { name, thumbnailSrc, description, source } = props;
+  const { name, thumbnailSrc, description, source, tech } = props;
+
+  let techList = tech;
+
+  const handleRenderLogo = (name: string) => {
+    if (name === "html") {
+      return <FontAwesomeIcon icon={faHtml5} />;
+    } else if (name === "css") {
+      return <FontAwesomeIcon icon={faCss3Alt} />;
+    } else if (name === "react") {
+      return <FontAwesomeIcon icon={faReact} />;
+    } else if (name === "bootstrap") {
+      return <FontAwesomeIcon icon={faBootstrap} />;
+    } else if (name === "tailwind") {
+      return (
+        <Image>
+          <img src={TailwindLogo} alt="tailwind" sizes="1rem" />
+        </Image>
+      );
+    }
+  };
 
   return (
     <ProjectContainer>
@@ -167,7 +149,34 @@ export function Project(props: IProjectProps) {
       <DescriptionContainer>
         <p>{description}</p>
       </DescriptionContainer>
-      <RentButton text="Source Code" />
+      <TechContainer>
+        <>
+          <p>Tech:&nbsp;</p>
+          {techList?.map((tech, index) => (
+            <TechIcon key={index}>{handleRenderLogo(tech)}</TechIcon>
+          ))}
+        </>
+      </TechContainer>
+      {/* <TechContainer>
+        <TechIcon>
+          <FontAwesomeIcon icon={faHtml5} />
+        </TechIcon>
+        <TechIcon>
+          <FontAwesomeIcon icon={faCss3Alt} />
+        </TechIcon>
+        <TechIcon>
+          <FontAwesomeIcon icon={faReact} />
+        </TechIcon>
+        <TechIcon>
+          <FontAwesomeIcon icon={faBootstrap} />
+        </TechIcon>
+        <TechIcon>
+          <Image>
+            <img src={TailwindLogo} alt="tailwind" sizes="1rem" />
+          </Image>
+        </TechIcon>
+      </TechContainer> */}
+      <VisitButton text="Visit" source={source} />
     </ProjectContainer>
   );
 }

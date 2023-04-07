@@ -6,18 +6,20 @@ interface IButtonProps {
   theme?: "filled" | "outlined";
   text: string;
   className?: string;
+  source?: string;
 }
 
 const BaseButton = styled.button`
   ${tw`
-        pl-5
-        pr-5
+        pr-3
+        pl-3
         pt-3
         pb-3
         outline-none
         rounded-md
         text-white
         text-xs
+        content-center
         font-semibold
         border-transparent
         border-2
@@ -26,7 +28,6 @@ const BaseButton = styled.button`
         transition-all
         duration-200
         ease-in-out
-        m-1
     `};
 `;
 
@@ -51,9 +52,28 @@ const FilledButton = styled(BaseButton)`
 `;
 
 export function Button(props: IButtonProps) {
-  const { theme, text, className } = props;
+  const { theme, text, className, source } = props;
 
   if (theme === "filled")
-    return <FilledButton className={className}>{text}</FilledButton>;
-  else return <OutlinedButton className={className}>{text}</OutlinedButton>;
+    return (
+      <a
+        href={source}
+        style={{ width: "100%" }}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FilledButton className={className}>{text}</FilledButton>
+      </a>
+    );
+  else
+    return (
+      <a
+        href={source}
+        style={{ width: "100%" }}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <OutlinedButton className={className}>{text}</OutlinedButton>
+      </a>
+    );
 }

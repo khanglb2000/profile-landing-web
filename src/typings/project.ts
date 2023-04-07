@@ -3,4 +3,5 @@ export interface IProject {
   name: string;
   description: string;
   source: string;
+  tech?: string[];
 }

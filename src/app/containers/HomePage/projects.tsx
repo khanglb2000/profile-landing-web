@@ -74,6 +74,7 @@ export function Projects() {
     description:
       "LOSMS is a lubricant selling application for Petrolimex company. Petrolimex can manage orders and inventory more efficiently as well as engage with its customers easier.",
     source: "https://github.com/redore0311/Capstone-Project-FE",
+    tech: ["react", "bootstrap", "tailwind"],
   };
 
   const project2: IProject = {
@@ -83,6 +84,7 @@ export function Projects() {
     description:
       "This project is about a birds selling application for Chystore Bird Store. Chystore can sell their bird products more efficiently across Viet Nam, as well as view store statistics.",
     source: "https://github.com/mavisphung/swp391/tree/main/frontend.admin",
+    tech: ["react", "bootstrap"],
   };
 
   const project3: IProject = {
@@ -91,7 +93,8 @@ export function Projects() {
       "https://firebasestorage.googleapis.com/v0/b/bird-shop-22ade.appspot.com/o/appImages%2Fmusic-player.PNG?alt=media&token=44c0948d-d365-4c12-8cf9-9cf100a0fb74",
     description:
       "With Music Player, user can play, pause songs, skip to next or previous one, or even play in suffle mode.",
-    source: "https://github.com/khanglb2000/music-player-study",
+    source: "https://music-player-7zmb.onrender.com/",
+    tech: ["html", "css"],
   };
 
   const responsive = {
