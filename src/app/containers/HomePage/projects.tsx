@@ -74,7 +74,7 @@ export function Projects() {
     description:
       "LOSMS is a lubricant selling application for Petrolimex company. Petrolimex can manage orders and inventory more efficiently as well as engage with its customers easier.",
     source: "https://github.com/redore0311/Capstone-Project-FE",
-    tech: ["react", "bootstrap", "tailwind"],
+    tech: ["react", "antD", "firebase", "bootstrap", "tailwind"],
   };
 
   const project2: IProject = {
@@ -84,7 +84,7 @@ export function Projects() {
     description:
       "This project is about a birds selling application for Chystore Bird Store. Chystore can sell their bird products more efficiently across Viet Nam, as well as view store statistics.",
     source: "https://github.com/mavisphung/swp391/tree/main/frontend.admin",
-    tech: ["react", "bootstrap"],
+    tech: ["react", "bootstrap", "antD", "firebase"],
   };
 
   const project3: IProject = {

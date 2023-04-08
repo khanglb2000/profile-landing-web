@@ -4,7 +4,6 @@ import tw from "twin.macro";
 
 import { SCREENS } from "../../components/responsive";
 import { Button } from "../../components/button";
-import JeepImg from "../../../assets/images/jeep.png";
 import ProfileImg from "../../../assets/images/cv-profile.png";
 
 const AboutMeContainer = styled.div`
@@ -14,22 +13,19 @@ const AboutMeContainer = styled.div`
         flex-wrap
         items-center
         justify-center
-        py-4
-        pl-4
-        md:pl-0
-        md:pr-0
+        p-4
+        md:px-0
         bg-white
     `};
 
   @media (max-width: ${SCREENS.md}) {
-    width: 50vh;
+    max-width: 50vh;
   }
 `;
 
-const CarContainer = styled.div`
+const ImageContainer = styled.div`
   width: auto;
   height: 15em;
-  margin-left: -50px;
 
   img {
     width: auto;
@@ -58,6 +54,10 @@ const InfoContainer = styled.div`
         md:ml-6
         2xl:ml-16
     `};
+
+  @media (max-width: ${SCREENS.md}) {
+    padding: 0 10px;
+  }
 `;
 
 const Title = styled.h1`
@@ -65,17 +65,16 @@ const Title = styled.h1`
         text-black
         text-2xl
         md:text-5xl
-        font-extrabold
-        md:font-black
+        md:font-thin
         md:leading-normal
     `};
 `;
 
 const InfoText = styled.p`
   ${tw`
-        md:max-w-2xl
-        text-sm
-        md:text-base
+        md:max-w-4xl
+        text-base
+        md:text-xl
         text-gray-500
         font-normal
         mt-4
@@ -93,21 +92,35 @@ const ButtonsContainer = styled.div`
 export function AboutMe() {
   return (
     <AboutMeContainer id="home">
-      <CarContainer>
+      <ImageContainer>
         <img src={ProfileImg} alt="" />
-      </CarContainer>
+      </ImageContainer>
       <InfoContainer>
-        <Title>Bao Khang Lam</Title>
+        <p style={{ fontSize: "1.5rem" }}>Hello</p>
+        <Title>
+          I'm{" "}
+          <strong style={{ color: "#1e40af" }}>
+            Bao Khang
+            <br /> A
+          </strong>{" "}
+          Front-end Developer
+        </Title>
         <InfoText>
-          I am a junior front-end developer in Ho Chi Minh City. I'm going to
+          💻 I am a junior front-end developer in Ho Chi Minh City. I'm going to
           graduate from FPT University in summer 2023 and currently looking for
-          a fulltime Front-end developer position. I have experience with
-          Typescript, React, Tailwind, Angular, Bootstrap. I would be thrilled
-          to learn more alongside your cross-functional team of engineers,
-          designers, and developers.
+          a fulltime Front-end developer position.
+          <br />
+          💻 I have experience with Typescript, React, Tailwind, Ant Design,
+          Bootstrap.
+          <br /> 💻 I would be thrilled to learn more alongside your
+          cross-functional team of engineers, designers, and developers.
         </InfoText>
         <ButtonsContainer>
-          <Button text="Download CV" />
+          <Button
+            text="Download CV"
+            source={ProfileImg}
+            downloaded="khang-cv"
+          />
         </ButtonsContainer>
       </InfoContainer>
     </AboutMeContainer>

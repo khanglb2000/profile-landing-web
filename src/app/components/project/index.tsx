@@ -11,6 +11,8 @@ import {
   faReact,
 } from "@fortawesome/free-brands-svg-icons";
 import TailwindLogo from "../../../assets/images/tailwind-css.png";
+import FirebaseLogo from "../../../assets/images/firebase.png";
+import AntDesignLogo from "../../../assets/images/ant-design.png";
 
 interface IProjectProps extends IProject {}
 
@@ -87,10 +89,10 @@ const TechIcon = styled.span`
 
 const Image = styled.div`
   width: auto;
-  ${tw`h-6 md:h-9`};
+  ${tw`h-6 md:h-6`};
   img {
     width: auto;
-    height: 70%;
+    height: 75%;
   }
 `;
 
@@ -129,7 +131,19 @@ export function Project(props: IProjectProps) {
     } else if (name === "tailwind") {
       return (
         <Image>
-          <img src={TailwindLogo} alt="tailwind" sizes="1rem" />
+          <img src={TailwindLogo} alt="tailwind" />
+        </Image>
+      );
+    } else if (name === "firebase") {
+      return (
+        <Image>
+          <img src={FirebaseLogo} alt="firebase" />
+        </Image>
+      );
+    } else if (name === "antD") {
+      return (
+        <Image>
+          <img src={AntDesignLogo} alt="antD" />
         </Image>
       );
     }

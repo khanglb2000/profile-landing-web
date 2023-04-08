@@ -10,7 +10,7 @@ interface ILogoProps {
 }
 
 const LogoContainer = styled.div`
-  padding-left: 1rem;
+  padding-left: 0.5rem;
   ${tw`
     flex
     items-center

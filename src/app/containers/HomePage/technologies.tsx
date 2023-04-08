@@ -10,6 +10,9 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import TailwindLogo from "../../../assets/images/tailwind-css.png";
 import MongoDBLogo from "../../../assets/images/mongoDB.jpg";
+import TypescriptLogo from "../../../assets/images/typescript.png";
+import FirebaseLogo from "../../../assets/images/firebase.png";
+import AntDesignLogo from "../../../assets/images/ant-design.png";
 
 const Container = styled.div`
   ${tw`
@@ -57,14 +60,14 @@ const TechIcon = styled.span`
         mb-5
         border-4
         border-solid
-        border-blue-800
+        border-black
         overflow-hidden
     `};
 `;
 
 const Image = styled.div`
   width: auto;
-  ${tw`h-[3.5rem] md:h-[3.5rem]`};
+  ${tw`h-[3.2rem] md:h-[3.2rem]`};
   img {
     width: auto;
     height: 100%;
@@ -81,18 +84,33 @@ const Technologies = () => {
           <FontAwesomeIcon icon={faReact} color="#61dbfb" />
         </TechIcon>
         <TechIcon>
+          <Image>
+            <img src={TypescriptLogo} alt="typescript" sizes="1rem" />
+          </Image>
+        </TechIcon>
+        <TechIcon>
+          <Image>
+            <img src={FirebaseLogo} alt="firebase" sizes="1rem" />
+          </Image>
+        </TechIcon>
+        <TechIcon>
+          <Image>
+            <img src={AntDesignLogo} alt="antD" sizes="1rem" />
+          </Image>
+        </TechIcon>
+        <TechIcon>
           <FontAwesomeIcon icon={faBootstrap} color="#563d7c" />
+        </TechIcon>
+        <TechIcon>
+          <Image>
+            <img src={TailwindLogo} alt="tailwind" sizes="1rem" />
+          </Image>
         </TechIcon>
         <TechIcon>
           <FontAwesomeIcon icon={faHtml5} color="#e34c26" />
         </TechIcon>
         <TechIcon>
           <FontAwesomeIcon icon={faCss3Alt} color="#264de4" />
-        </TechIcon>
-        <TechIcon>
-          <Image>
-            <img src={TailwindLogo} alt="tailwind" sizes="1rem" />
-          </Image>
         </TechIcon>
         <TechIcon>
           <Image>

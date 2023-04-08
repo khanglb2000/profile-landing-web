@@ -2,8 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { Logo } from "../logo";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const FooterContainer = styled.div`
   //min-height: 24em;
@@ -35,7 +36,6 @@ const BottomContainer = styled.div`
         flex
         max-w-screen-2xl
         justify-center
-        md:justify-start
         mt-7
         md:mt-1
     `};
@@ -179,12 +179,12 @@ export function Footer() {
           </LinksList>
         </SectionContainer>
         <SectionContainer>
-          <HeaderTitle>Call Now</HeaderTitle>
+          <HeaderTitle>Github</HeaderTitle>
           <HorizontalContainer>
             <BlueIcon>
-              <FontAwesomeIcon icon={faPhoneAlt} />
+              <FontAwesomeIcon icon={faGithub} />
             </BlueIcon>
-            <SmallText>+84 555-666-777</SmallText>
+            <SmallText>My github</SmallText>
           </HorizontalContainer>
         </SectionContainer>
         <SectionContainer>

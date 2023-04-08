@@ -7,6 +7,7 @@ interface IButtonProps {
   text: string;
   className?: string;
   source?: string;
+  downloaded?: string;
 }
 
 const BaseButton = styled.button`
@@ -54,7 +55,7 @@ const FilledButton = styled(BaseButton)`
 `;
 
 export function Button(props: IButtonProps) {
-  const { theme, text, className, source } = props;
+  const { theme, text, className, source, downloaded } = props;
 
   if (theme === "filled")
     return (
@@ -63,6 +64,7 @@ export function Button(props: IButtonProps) {
         style={{ width: "100%" }}
         target="_blank"
         rel="noopener noreferrer"
+        download={downloaded}
       >
         <FilledButton className={className}>{text}</FilledButton>
       </a>
@@ -74,6 +76,7 @@ export function Button(props: IButtonProps) {
         style={{ width: "100%" }}
         target="_blank"
         rel="noopener noreferrer"
+        download={downloaded}
       >
         <OutlinedButton className={className}>{text}</OutlinedButton>
       </a>

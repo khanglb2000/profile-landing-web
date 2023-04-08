@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Container = styled.div`
   ${tw`
@@ -118,15 +118,19 @@ export function Contact() {
           <StepDescription>Connect me on Linkedin.</StepDescription>
         </StepContainer>
         <StepContainer>
-          <a href="tel:+84555666777">
+          <a
+            href="https://github.com/khanglb2000"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Step>
               <StepIcon>
-                <FontAwesomeIcon icon={faPhone} color="orange" />
+                <FontAwesomeIcon icon={faGithub} color="black" />
               </StepIcon>
             </Step>
           </a>
-          <StepTitle>Call Me</StepTitle>
-          <StepDescription>Here is my phone number.</StepDescription>
+          <StepTitle>Github</StepTitle>
+          <StepDescription>Visit my github.</StepDescription>
         </StepContainer>
       </StepsContainer>
     </Container>

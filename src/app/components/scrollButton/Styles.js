@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { SCREENS } from "../responsive";
 
 export const Button = styled.div`
   position: fixed;
@@ -10,4 +11,8 @@ export const Button = styled.div`
   z-index: 1;
   cursor: pointer;
   color: white;
+
+  @media (max-width: ${SCREENS.md}) {
+    left: 43%;
+  }
 `;
