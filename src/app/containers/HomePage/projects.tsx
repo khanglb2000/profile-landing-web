@@ -97,6 +97,16 @@ export function Projects() {
     tech: ["html", "css"],
   };
 
+  const project4: IProject = {
+    name: "Redux Blog",
+    thumbnailSrc:
+      "https://firebasestorage.googleapis.com/v0/b/bird-shop-22ade.appspot.com/o/appImages%2Fredux-blog-screen.PNG?alt=media&token=8f093d4b-b512-45bf-b501-cb16dd62fe26",
+    description:
+      "At this Blog, poster can view posts list, add, edit or delete posts. Users also can view other users' posts.",
+    source: "https://redux-blog-18c2.onrender.com/",
+    tech: ["react", "redux", "tailwind"],
+  };
+
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -138,7 +148,7 @@ export function Projects() {
           <Project {...project} />
           <Project {...project2} />
           <Project {...project3} />
-          <Project {...project} />
+          <Project {...project4} />
         </Carousel>
       </ProjectContainer>
     </ProjectsListContainer>

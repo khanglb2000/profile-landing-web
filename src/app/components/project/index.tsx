@@ -13,6 +13,7 @@ import {
 import TailwindLogo from "../../../assets/images/tailwind-css.png";
 import FirebaseLogo from "../../../assets/images/firebase.png";
 import AntDesignLogo from "../../../assets/images/ant-design.png";
+import ReduxLogo from "../../../assets/images/redux-logo.png";
 
 interface IProjectProps extends IProject {}
 
@@ -144,6 +145,12 @@ export function Project(props: IProjectProps) {
       return (
         <Image>
           <img src={AntDesignLogo} alt="antD" />
+        </Image>
+      );
+    } else if (name === "redux") {
+      return (
+        <Image>
+          <img src={ReduxLogo} alt="redux" />
         </Image>
       );
     }
