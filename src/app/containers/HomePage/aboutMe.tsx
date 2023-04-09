@@ -4,7 +4,10 @@ import tw from "twin.macro";
 
 import { SCREENS } from "../../components/responsive";
 import { Button } from "../../components/button";
-import ProfileImg from "../../../assets/images/cv-profile.png";
+import ProfileImg from "../../../assets/images/profile-img.png";
+
+const myCVurl =
+  "https://firebasestorage.googleapis.com/v0/b/bird-shop-22ade.appspot.com/o/appImages%2FLAM-BAO-KHANG.pdf?alt=media&token=e66c04ea-4db9-46d5-abe9-d4fb89efb48b";
 
 const AboutMeContainer = styled.div`
   ${tw`
@@ -30,19 +33,27 @@ const ImageContainer = styled.div`
   img {
     width: auto;
     height: 100%;
+    border-radius: 50%;
+    border: 4px solid #1e40af;
   }
 
   @media (min-width: ${SCREENS.md}) {
-    height: 28em;
+    height: 20em;
   }
 
   @media (min-width: ${SCREENS.lg}) {
-    height: 30em;
+    height: 25em;
+    img {
+      border: 6px solid #1e40af;
+    }
   }
 
   @media (min-width: ${SCREENS["2xl"]}) {
-    height: 35em;
+    height: 30em;
     margin-left: 0;
+    img {
+      border: 6px solid #1e40af;
+    }
   }
 `;
 
@@ -106,7 +117,7 @@ export function AboutMe() {
           Front-end Developer
         </Title>
         <InfoText>
-          💻 I am a junior front-end developer in Ho Chi Minh City. I'm going to
+          💻 I am a front-end developer in Ho Chi Minh City. I'm going to
           graduate from FPT University in summer 2023 and currently looking for
           a fulltime Front-end developer position.
           <br />
@@ -116,11 +127,7 @@ export function AboutMe() {
           cross-functional team of engineers, designers, and developers.
         </InfoText>
         <ButtonsContainer>
-          <Button
-            text="Download CV"
-            source={ProfileImg}
-            downloaded="khang-cv"
-          />
+          <Button text="Download CV" source={myCVurl} downloaded="khang-cv" />
         </ButtonsContainer>
       </InfoContainer>
     </AboutMeContainer>

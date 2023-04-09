@@ -74,7 +74,7 @@ export function Projects() {
     description:
       "LOSMS is a lubricant selling application for Petrolimex company. Petrolimex can manage orders and inventory more efficiently as well as engage with its customers easier.",
     source: "https://github.com/redore0311/Capstone-Project-FE",
-    tech: ["react", "antD", "firebase", "bootstrap", "tailwind"],
+    tech: ["react", "antD", "firebase", "bootstrap"],
   };
 
   const project2: IProject = {
@@ -146,8 +146,8 @@ export function Projects() {
           partialVisible={true}
         >
           <Project {...project} />
-          <Project {...project2} />
           <Project {...project3} />
+          <Project {...project2} />
           <Project {...project4} />
         </Carousel>
       </ProjectContainer>
