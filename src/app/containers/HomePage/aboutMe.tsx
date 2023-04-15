@@ -11,12 +11,12 @@ const myCVurl =
 
 const AboutMeContainer = styled.div`
   ${tw`
-        w-full
+        max-w-full
         flex
         flex-wrap
         items-center
         justify-center
-        p-4
+        py-4
         md:px-0
         bg-white
     `};

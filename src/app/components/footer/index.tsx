@@ -12,7 +12,7 @@ const FooterContainer = styled.div`
   ${tw`
         flex
         flex-col
-        w-[101%]
+        w-[100%]
         pt-10
         md:pt-16
         items-center

@@ -37,6 +37,7 @@ const ProjectContainer = styled.div`
         flex-wrap
         justify-center
         mt-7
+        mb-10
         md:mt-10
     `};
 `;

@@ -4,7 +4,7 @@ import { SCREENS } from "../responsive";
 export const Button = styled.div`
   position: fixed;
   width: 100%;
-  left: 95%;
+  left: 100%;
   bottom: 50px;
   height: 20px;
   font-size: 3rem;
@@ -13,6 +13,6 @@ export const Button = styled.div`
   color: white;
 
   @media (max-width: ${SCREENS.md}) {
-    left: 43%;
+    left: 44.5%;
   }
 `;

@@ -31,6 +31,7 @@ const ProjectContainer = styled.div`
         bg-white
         rounded-md
         m-1
+        mb-6
         sm:m-3
         md:m-6
     `};
