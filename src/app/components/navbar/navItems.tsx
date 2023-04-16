@@ -5,6 +5,9 @@ import { slide as Menu } from "react-burger-menu";
 import { useMediaQuery } from "react-responsive";
 import menuStyles from "./menuStyles";
 import { SCREENS } from "../responsive";
+import { AiFillHome, AiFillPhone } from "react-icons/ai";
+import { MdWork } from "react-icons/md";
+import { FaTools } from "react-icons/fa";
 
 const ListContainer = styled.ul`
   ${tw`
@@ -27,6 +30,7 @@ const NavItem = styled.li<{ menu?: any }>`
     duration-300
     ease-in-out
     hover:text-gray-700
+    flex
   `};
 
   ${({ menu }) =>
@@ -38,8 +42,17 @@ const NavItem = styled.li<{ menu?: any }>`
         mb-3
         focus:text-white
         no-underline
+        hover:text-[#b7fbff]
     `};
     `};
+`;
+
+const MobileIcon = styled.div`
+  ${tw`
+    mr-3
+    pt-0.5
+    text-xl
+  `}
 `;
 
 export function NavItems() {
@@ -65,15 +78,27 @@ export function NavItems() {
       >
         <ListContainer>
           <NavItem menu onClick={closeSideBar}>
+            <MobileIcon>
+              <AiFillHome />
+            </MobileIcon>
             <a href="#home">Home</a>
           </NavItem>
           <NavItem menu onClick={closeSideBar}>
+            <MobileIcon>
+              <MdWork />
+            </MobileIcon>
             <a href="#project">Projects</a>
           </NavItem>
           <NavItem menu onClick={closeSideBar}>
+            <MobileIcon>
+              <FaTools />
+            </MobileIcon>
             <a href="#tech">Skills</a>
           </NavItem>
           <NavItem menu onClick={closeSideBar}>
+            <MobileIcon>
+              <AiFillPhone />
+            </MobileIcon>
             <a href="#contact">Contact</a>
           </NavItem>
         </ListContainer>

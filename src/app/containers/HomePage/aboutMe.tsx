@@ -95,7 +95,6 @@ const InfoText = styled.p`
 const ButtonsContainer = styled.div`
   ${tw`
         flex
-        flex-wrap
         mt-4
     `};
 `;
